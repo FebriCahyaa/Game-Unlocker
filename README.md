@@ -40,7 +40,7 @@ You can untick the game you don't want to spoof for the module scope. Force stop
 
 **Note:** Keep in mind that device spoofing may violate the terms of service for some games or apps.
 
-Report any suggestions/issues with games [here](https://github.com/rushiranpise/Game-Unlocker/issues)
+Report any suggestions/issues with games [here](https://github.com/febricahyaa/Game-Unlocker/issues)
 
 ## Supported Games
 

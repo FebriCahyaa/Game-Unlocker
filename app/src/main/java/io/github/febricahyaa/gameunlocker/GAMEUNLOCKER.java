@@ -1,4 +1,4 @@
-package io.github.rushiranpise.gameunlocker;
+package io.github.febricahyaa.gameunlocker;
 
 import android.annotation.SuppressLint;
 import android.os.Build;
@@ -51,8 +51,8 @@ public class GAMEUNLOCKER implements IXposedHookLoadPackage {
         "com.YoStar.AetherGazer"
     };
 
-    // Packages to Spoof as Poco F5
-    private static final String[] PACKAGE_F5 = {
+    // Packages to Spoof as Poco F6
+    private static final String[] PACKAGE_F6 = {
         "com.dts.freefiremax",
         "com.dts.freefireth"
     };
@@ -76,8 +76,8 @@ public class GAMEUNLOCKER implements IXposedHookLoadPackage {
         "com.tencent.lolm"
     };
 
-    // Packages to Spoof as Samsung Galaxy S23 Ultra
-    private static final String[] PACKAGE_DM3Q = {
+    // Packages to Spoof as Samsung Galaxy S24 Ultra
+    private static final String[] PACKAGE_DM4Q = {
         "com.vng.codmvn",
         "com.activision.callofduty.shooter",
         "com.garena.game.codm",
@@ -153,15 +153,15 @@ public class GAMEUNLOCKER implements IXposedHookLoadPackage {
         }
 
         // Poco
-        if (Arrays.asList(PACKAGE_F5).contains(packageName)) {
-            POCOF5();
-            XposedBridge.log("Spoofed " + packageName + " as Poco F5");
+        if (Arrays.asList(PACKAGE_F6).contains(packageName)) {
+            POCOF6();
+            XposedBridge.log("Spoofed " + packageName + " as Poco F6");
         }
 
         // Samsung
-        if (Arrays.asList(PACKAGE_DM3Q).contains(packageName)) {
-            DM3Q();
-            XposedBridge.log("Spoofed " + packageName + " as Samsung Galaxy S23 Ultra");
+        if (Arrays.asList(PACKAGE_DM4Q).contains(packageName)) {
+            DM4Q();
+            XposedBridge.log("Spoofed " + packageName + " as Samsung Galaxy S24 Ultra");
         }
 
         // Xiaomi
@@ -243,20 +243,20 @@ public class GAMEUNLOCKER implements IXposedHookLoadPackage {
     }
 
     //Poco
-    // Props to Spoof as Poco F5
-    private static void POCOF5() {
+    // Props to Spoof as Poco F6
+    private static void POCOF6() {
         setPropValue("BRAND", "Xiaomi");
         setPropValue("MANUFACTURER", "Xiaomi");
-        setPropValue("MODEL", "23049PCD8G");
+        setPropValue("MODEL", "2311DRK48G");
     }
 
     // Samsung
-    // Props to Spoof as Samsung S23 Ultra
-    private static void DM3Q() {
+    // Props to Spoof as Samsung S24 Ultra
+    private static void DM4Q() {
         setPropValue("BRAND", "Samsung");
         setPropValue("MANUFACTURER", "Samsung");
-        setPropValue("DEVICE", "dm3q");
-        setPropValue("MODEL", "SM-S918B");
+        setPropValue("DEVICE", "dm4q");
+        setPropValue("MODEL", "SM-S928B");
     }
 
     // Xiaomi
